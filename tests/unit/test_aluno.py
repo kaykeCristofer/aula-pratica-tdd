@@ -11,6 +11,10 @@ def test_retornar_menor_nota():
     aluno = Aluno(nome="Julia", notas=[6, 7, 4, 9], faltas=2)
     assert aluno.menor_nota() == 4
 
+def test_calcular_media():
+    aluno = Aluno(nome="Carlos", notas=[7, 7, 7], faltas=1)
+    assert aluno.calcular_media() == 7
+
 # =============================================================
 # PARTE 2 — Implemente com TDD
 # Siga o ciclo: 🔴 escreva o teste → 🟢 implemente → 🟡 refatore
