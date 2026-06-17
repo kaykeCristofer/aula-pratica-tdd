@@ -15,6 +15,10 @@ def test_calcular_media():
     aluno = Aluno(nome="Carlos", notas=[7, 7, 7], faltas=1)
     assert aluno.calcular_media() == 7
 
+def test_calcular_media_arredondada():
+    aluno = Aluno(nome="Carol", notas=[5, 6, 7, 9], faltas=0)
+    assert aluno.calcular_media_arredondada() == 7
+
 # =============================================================
 # PARTE 2 — Implemente com TDD
 # Siga o ciclo: 🔴 escreva o teste → 🟢 implemente → 🟡 refatore
