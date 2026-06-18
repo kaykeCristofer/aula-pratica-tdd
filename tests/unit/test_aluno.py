@@ -75,6 +75,9 @@ def test_contar_aprovados_com_lista_vazia():
 # Requisito 2 — situacao_final(total_aulas) -> str
 # Escreva os testes ANTES de implementar o método
 
+def test_situacao_final_reprovado_por_falta():
+    aluno = Aluno("Ana", [8, 9, 9], faltas=5) 
+    assert aluno.situacao_final(total_aulas=10) == "Reprovado por falta"
 
 # Requisito 3 — enviar_boletim(email_service)
 # Use MagicMock para simular o serviço de e-mail
