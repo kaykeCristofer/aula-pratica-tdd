@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 from aluno.aluno import Aluno
+from aluno.aluno import contar_aprovados
 
 
 # =============================================================
