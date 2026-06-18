@@ -90,6 +90,11 @@ def test_situacao_final_reprovado_por_nota():
 
     assert aluno.situacao_final(total_aulas=5) == "Reprovado por nota"
 
+def test_situacao_final_nao_reprova_por_falta_quando_tem_exatamente_25_por_cento():
+    aluno = Aluno(nome="Henrique", notas=[5, 5, 3, 7], faltas=1)
+
+    assert aluno.situacao_final(total_aulas=4) == "Reprovado por nota"
+
 # Requisito 3 — enviar_boletim(email_service)
 # Use MagicMock para simular o serviço de e-mail
 # Escreva os testes ANTES de implementar o método
