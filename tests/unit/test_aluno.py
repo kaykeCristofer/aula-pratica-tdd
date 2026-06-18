@@ -40,6 +40,14 @@ def test_nota_maxima():
 # Requisito 1 — contar_aprovados(lista_de_alunos) -> int
 # Escreva os testes ANTES de implementar a função
 
+def test_contar_aprovados_com_todos_aprovados():
+    alunos = [
+        Aluno(nome="Julia", notas=[9, 8, 9, 10], faltas=3),
+        Aluno(nome="Maria", notas=[7, 6, 5, 8], faltas=5),
+        Aluno(nome="Caroline", notas=[10, 10, 10, 10], faltas=0),
+    ]
+
+    assert contar_aprovados(alunos) == 3
 
 # Requisito 2 — situacao_final(total_aulas) -> str
 # Escreva os testes ANTES de implementar o método
