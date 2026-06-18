@@ -68,6 +68,9 @@ def test_contar_aprovados_com_lista_mista():
 
     assert contar_aprovados(alunos) == 2
 
+def test_contar_aprovados_com_lista_vazia():
+    assert contar_aprovados([]) == 0
+
 # Requisito 2 — situacao_final(total_aulas) -> str
 # Escreva os testes ANTES de implementar o método
 
