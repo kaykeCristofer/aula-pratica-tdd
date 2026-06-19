@@ -110,8 +110,8 @@ def test_enviar_boletim_aciona_email_se_reprovado():
 
     aluno.enviar_boletim(email_service)
 
-    email_service.assert_called_once_with("Carol", 4.0)
-
+    email_service.enviar.assert_called_once_with("Carol", 4.75)
+    
 def test_enviar_boletim_nao_aciona_servico_quando_aluno_estiver_aprovado():
     aluno = Aluno(nome="Nicole", notas=[10, 9, 10, 10], faltas=1)
     email_service = MagicMock()
